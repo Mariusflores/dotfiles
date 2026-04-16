@@ -1,0 +1,7 @@
+# Never commit these
+*.log
+*_history
+.ssh/
+.aws/credentials
+*.key
+*.pem
