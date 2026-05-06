@@ -5,3 +5,6 @@ alias cheatsheet='explorer.exe "\\\\wsl$\\Ubuntu\\home\\marius\\reference\\linux
 
 #Path
 export PATH=$PATH:/mnt/c/Windows
+
+# Add Windows VS Code CLI to PATH (WSL)
+export PATH=$PATH:/mnt/c/Users/mariu/AppData/Local/Programs/'Microsoft VS Code'/bin
