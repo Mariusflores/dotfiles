@@ -1,0 +1,7 @@
+# Local Bashrc config (WSL specific)
+
+#Aliases
+alias cheatsheet='explorer.exe "\\\\wsl$\\Ubuntu\\home\\marius\\reference\\linux-cheatsheet.html"'
+
+#Path
+export PATH=$PATH:/mnt/c/Windows

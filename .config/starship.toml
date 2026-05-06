@@ -1,0 +1,22 @@
+command_timeout = 1000
+
+
+# Directory
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "cyan"
+
+[git_branch]
+symbol = " "
+style = "bold green"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold red"
+
+
+[os]
+disabled = false
+format = "[$symbol($name )]($style)"
+style = "bold red"

@@ -101,7 +101,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+	. ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -115,8 +115,17 @@ if ! shopt -oq posix; then
   fi
 fi
 eval "$(starship init bash)"
-export PATH=$HOME/utils/scripts:$PATH
+
+case ":$PATH:" in
+  *":$HOME/utils/bin:"*) ;;
+  *) export PATH="$HOME/utils/bin:$PATH" ;;
+esac
 
 
 # Machine-specific config (not tracked in dotfiles)
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/bin:$PATH"
