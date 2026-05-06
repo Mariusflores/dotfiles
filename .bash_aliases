@@ -1,16 +1,22 @@
 # === My Custom Config ===
 # Aliases
 alias projects='cd ~/projects'
-alias flagship='cd ~/projects/flagship'
+alias core='cd ~/projects/core'
 alias utils='cd ~/utils'
 alias tools='cd ~/utils/tools'
 alias til='cd ~/utils/notes/til'
 alias gs='git status'
 alias gp='git push'
 alias cls='clear'
-alias bashrc='nano ~/.bashrc && source ~/.bashrc'
+alias bashrc='nano ~/.bashrc && source ~/.bashrc' 
+alias cd..='cd ..'
+alias br='cd ~/projects/core/baby-redis'
 
-# Functions
-gc(){
-git commit -m "$*"
+
+gcommit() {
+  if [[ -z "$*" ]]; then
+    echo "Usage: gcommit <commit message>"
+    return 1
+  fi
+  git commit -m "$*"
 }
