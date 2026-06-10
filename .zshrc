@@ -50,6 +50,8 @@ alias ll='exa -lah --icons --group-directories-first'
 # bat (keep real cat)
 alias cat='batcat --style=plain --paging=never'
 
+export PATH="$HOME/utils/bin:$PATH"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -140,4 +142,7 @@ alias cat='batcat --style=plain --paging=never'
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
- alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+fastfetch
+
+. "$HOME/.local/bin/env"
